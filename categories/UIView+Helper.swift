@@ -54,7 +54,7 @@ extension UIView{
         }
     }
     
-    var bottom: CGFloat {
+    public var bottom: CGFloat {
         set {
             var newFrame = frame
             newFrame.origin.y = newValue - frame.size.height
@@ -65,7 +65,7 @@ extension UIView{
         }
     }
     
-    var size: CGSize {
+    public var size: CGSize {
         set {
             var newFrame = frame
             newFrame.size = newValue
@@ -76,7 +76,7 @@ extension UIView{
         }
     }
     
-    var width: CGFloat {
+    public var width: CGFloat {
         set {
             var newFrame = frame
             newFrame.size.width = newValue
@@ -87,7 +87,7 @@ extension UIView{
         }
     }
     
-    var height: CGFloat {
+    public var height: CGFloat {
         set {
             var newFrame = frame
             newFrame.size.height = newValue
