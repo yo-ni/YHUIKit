@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView{
     
-    var origin: CGPoint {
+    public var origin: CGPoint {
         set {
             var newFrame = frame
             newFrame.origin = newValue
@@ -21,7 +21,7 @@ extension UIView{
         }
     }
     
-    var x: CGFloat {
+    public var x: CGFloat {
         set {
             var newFrame = frame
             newFrame.origin.x = newValue
@@ -32,7 +32,7 @@ extension UIView{
         }
     }
     
-    var y: CGFloat {
+    public var y: CGFloat {
         set {
             var newFrame = frame
             newFrame.origin.y = newValue
@@ -43,7 +43,7 @@ extension UIView{
         }
     }
     
-    var right: CGFloat {
+    public var right: CGFloat {
         set {
             var newFrame = frame
             newFrame.origin.x = newValue - frame.size.width
@@ -98,7 +98,7 @@ extension UIView{
         }
     }
     
-    var centerX: CGFloat {
+    public var centerX: CGFloat {
         set {
             center = CGPoint(x: newValue, y: center.y)
         }
@@ -107,7 +107,7 @@ extension UIView{
         }
     }
     
-    var centerY: CGFloat {
+    public var centerY: CGFloat {
         set {
             center = CGPoint(x:center.x, y:newValue)
         }
@@ -116,13 +116,13 @@ extension UIView{
         }
     }
     
-    func centerInSuperview(){
+    public func centerInSuperview(){
         if let superview = superview{
             center = CGPoint(x:superview.width/2, y:superview.height/2);
         }
     }
     
-    func snapShot() -> UIImage?{
+    public func snapShot() -> UIImage?{
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0);
         let ctx = UIGraphicsGetCurrentContext();
         
@@ -135,11 +135,11 @@ extension UIView{
         return image;
     }
     
-    class func windowHeight() -> CGFloat?{
+    public class func windowHeight() -> CGFloat?{
         return UIApplication.shared.keyWindow?.height;
     }
     
-    class func windowWidth() -> CGFloat?{
+    public class func windowWidth() -> CGFloat?{
         return UIApplication.shared.keyWindow?.width;
     }
 }
