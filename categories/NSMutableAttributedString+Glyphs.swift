@@ -27,11 +27,7 @@ extension NSMutableAttributedString  {
             return 0.0
         }
     }
-    
-    static var YHglass: NSMutableAttributedString {
-        return iconStringFromUnicode(unicode:"\u{f000}")
-    }
-    
+        
     class func YOglass() -> NSMutableAttributedString{
         return iconStringFromUnicode(unicode:"\u{f000}")
     }
