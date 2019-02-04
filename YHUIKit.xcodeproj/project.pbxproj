@@ -13,7 +13,6 @@
 		E973EFC31F9E8D0D00FB4A91 /* UIView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973EFC21F9E8D0D00FB4A91 /* UIView+Helper.swift */; };
 		E973EFC51F9E8FBA00FB4A91 /* UIcolor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973EFC41F9E8FBA00FB4A91 /* UIcolor+Helper.swift */; };
 		E973EFC71F9E909D00FB4A91 /* NSMutableAttributedString+Glyphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973EFC61F9E909D00FB4A91 /* NSMutableAttributedString+Glyphs.swift */; };
-		E973F0E31FAA4EBE00FB4A91 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973F0E21FAA4EBE00FB4A91 /* UIView+Autolayout.swift */; };
 		E9F8A80421494D6D0032C01D /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8A80321494D6D0032C01D /* String+Helper.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		E973EFC41F9E8FBA00FB4A91 /* UIcolor+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIcolor+Helper.swift"; sourceTree = "<group>"; };
 		E973EFC61F9E909D00FB4A91 /* NSMutableAttributedString+Glyphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Glyphs.swift"; sourceTree = "<group>"; };
 		E973F0111F9E927B00FB4A91 /* fontawesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fontawesome.ttf; sourceTree = "<group>"; };
-		E973F0E21FAA4EBE00FB4A91 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		E9F8A80321494D6D0032C01D /* String+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +102,6 @@
 			children = (
 				E973EFC21F9E8D0D00FB4A91 /* UIView+Helper.swift */,
 				E9F8A80321494D6D0032C01D /* String+Helper.swift */,
-				E973F0E21FAA4EBE00FB4A91 /* UIView+Autolayout.swift */,
 				E973EFC61F9E909D00FB4A91 /* NSMutableAttributedString+Glyphs.swift */,
 				E973EFC41F9E8FBA00FB4A91 /* UIcolor+Helper.swift */,
 			);
@@ -231,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E973EFC31F9E8D0D00FB4A91 /* UIView+Helper.swift in Sources */,
-				E973F0E31FAA4EBE00FB4A91 /* UIView+Autolayout.swift in Sources */,
 				E973EFC51F9E8FBA00FB4A91 /* UIcolor+Helper.swift in Sources */,
 				E9F8A80421494D6D0032C01D /* String+Helper.swift in Sources */,
 				E973EFC71F9E909D00FB4A91 /* NSMutableAttributedString+Glyphs.swift in Sources */,

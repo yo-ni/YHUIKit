@@ -1,10 +1,3 @@
-//
-//  UIView+Helpers.swift
-//  YHUIKit
-//
-//  Created by Yoni on 23/10/2017.
-//  Copyright © 2017 Yoni. All rights reserved.
-//
 
 import UIKit
 
@@ -43,7 +36,7 @@ extension UIView{
         }
     }
     
-    public var right: CGFloat {
+    public var frameRight: CGFloat {
         set {
             var newFrame = frame
             newFrame.origin.x = newValue - frame.size.width
@@ -54,7 +47,7 @@ extension UIView{
         }
     }
     
-    public var bottom: CGFloat {
+    public var frameBottom: CGFloat {
         set {
             var newFrame = frame
             newFrame.origin.y = newValue - frame.size.height
@@ -65,7 +58,7 @@ extension UIView{
         }
     }
     
-    public var size: CGSize {
+    public var frameSize: CGSize {
         set {
             var newFrame = frame
             newFrame.size = newValue
@@ -76,7 +69,7 @@ extension UIView{
         }
     }
     
-    public var width: CGFloat {
+    public var frameWidth: CGFloat {
         set {
             var newFrame = frame
             newFrame.size.width = newValue
@@ -87,7 +80,7 @@ extension UIView{
         }
     }
     
-    public var height: CGFloat {
+    public var frameHeight: CGFloat {
         set {
             var newFrame = frame
             newFrame.size.height = newValue
@@ -95,6 +88,28 @@ extension UIView{
         }
         get {
             return frame.size.height
+        }
+    }
+    
+    public var boundsWidth: CGFloat {
+        set {
+            var newBounds = self.bounds
+            newBounds.size.width = newValue
+            self.bounds = newBounds
+        }
+        get {
+            return self.bounds.size.width
+        }
+    }
+    
+    public var boundsHeight: CGFloat {
+        set {
+            var newBounds = self.bounds
+            newBounds.size.height = newValue
+            self.bounds = newBounds
+        }
+        get {
+            return self.bounds.size.height
         }
     }
     
@@ -117,29 +132,16 @@ extension UIView{
     }
     
     public func centerInSuperview(){
-        if let superview = superview{
-            center = CGPoint(x:superview.width/2, y:superview.height/2);
+        if let superview = superview {
+            center = CGPoint(x:superview.boundsWidth/2, y:superview.boundsHeight/2);
         }
     }
     
-    public func snapShot() -> UIImage?{
-        UIGraphicsBeginImageContextWithOptions(size, false, 0.0);
-        let ctx = UIGraphicsGetCurrentContext();
-        
-        if let ctx = ctx {
-            layer.render(in:ctx)
-        }
-        
-        let image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        return image;
+    public class var windowHeigh: CGFloat? {
+        return UIApplication.shared.keyWindow?.boundsHeight;
     }
     
-    public class func windowHeight() -> CGFloat?{
-        return UIApplication.shared.keyWindow?.height;
-    }
-    
-    public class func windowWidth() -> CGFloat?{
-        return UIApplication.shared.keyWindow?.width;
+    public class var windowWidth: CGFloat? {
+        return UIApplication.shared.keyWindow?.boundsWidth;
     }
 }
